@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A free ePlacement practice simulator for Malaysian dental placement candidates." />
+    <meta name="theme-color" content="#001628" />
+    <title>ePlacement Practice</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#mainContent">Skip to content</a>
+
+    <aside class="sidebar">
+      <button class="sidebar-close" id="sidebarClose" type="button" aria-label="Close navigation">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.7 5.3 5.3 5.3 5.3-5.3 1.4 1.4-5.3 5.3 5.3 5.3-1.4 1.4-5.3-5.3-5.3 5.3-1.4-1.4 5.3-5.3-5.3-5.3 1.4-1.4Z" /></svg>
+      </button>
+      <div class="brand" aria-label="ePlacement Practice">
+        <span class="brand-mark" aria-hidden="true">eP</span>
+        <div>
+          <div class="brand-word">ePlacement Practice</div>
+          <div class="brand-country">Placement simulator</div>
+        </div>
+      </div>
+
+      <nav class="side-nav" aria-label="Main navigation">
+        <div class="nav-group nav-primary" aria-labelledby="practice-nav-label">
+          <span class="nav-section-label" id="practice-nav-label">Practice</span>
+          <button class="nav-item" type="button" data-tab="simulation">
+            <svg class="nav-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7L8 5Z" /></svg>
+            <span>Simulation</span>
+          </button>
+          <button class="nav-item" type="button" data-tab="placement">
+            <svg class="nav-svg" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+            <span>Penempatan Calon</span>
+          </button>
+        </div>
+        <div class="nav-group nav-secondary" aria-labelledby="explore-nav-label">
+          <span class="nav-section-label" id="explore-nav-label">Explore</span>
+          <button class="nav-item active" type="button" data-tab="home">
+            <svg class="nav-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 10v11h6v-7h6v7h6V10l-9-7Z" /></svg>
+            <span>Home</span>
+          </button>
+          <button class="nav-item" type="button" data-tab="clinics">
+            <svg class="nav-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16v18H4V3Zm3 3v2h3V6H7Zm7 0v2h3V6h-3ZM7 11v2h3v-2H7Zm7 0v2h3v-2h-3ZM7 16v2h3v-2H7Zm7 0v2h3v-2h-3Z" /></svg>
+            <span>Clinic Dashboard</span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="sidebar-notice">
+        <strong>For practice only</strong>
+        <span>Not the official ePlacement website.</span>
+      </div>
+    </aside>
+
+    <main class="shell" id="mainContent">
+      <header class="topbar">
+        <button class="top-icon" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <svg class="top-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z" /></svg>
+        </button>
+        <span class="page-label" id="pageLabel">Home</span>
+        <time class="simulation-clock" id="clock"></time>
+      </header>
+
+      <section class="content page active public-page" id="home-page" aria-labelledby="home-title">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow">Free · Open source · Built for practice</span>
+            <h1 id="home-title">Practise the placement rush before the real day.</h1>
+            <p>Rehearse the time-sensitive clinic selection flow using a snapshot of publicly listed Malaysian dental clinic data.</p>
+            <div class="hero-actions">
+              <button class="primary-cta" type="button" data-tab-link="simulation">Start a practice run</button>
+              <button class="secondary-cta" type="button" data-tab-link="clinics">Explore all clinics</button>
+            </div>
+          </div>
+        </div>
+
+        <section class="home-section" aria-labelledby="guide-title">
+          <div class="section-heading">
+            <span class="eyebrow">How it works</span>
+            <h2 id="guide-title">One short rehearsal, four steps</h2>
+          </div>
+          <ol class="guide-grid">
+            <li><span>01</span><div><strong>Choose a nickname</strong><p>Use an alias, not your legal name. Results currently stay in this browser only.</p></div></li>
+            <li><span>02</span><div><strong>Start the countdown</strong><p>The simulated session begins ten seconds before clinic selection opens.</p></div></li>
+              <li><span>03</span><div><strong>Open Penempatan Calon</strong><p>Use the sidebar when the clock reaches noon, just as you would navigate during the real workflow.</p></div></li>
+            <li><span>04</span><div><strong>Review and confirm</strong><p>Complete the acknowledgement to record your practice time, then retry to improve.</p></div></li>
+          </ol>
+        </section>
+
+        <p class="home-contact">Questions? <a href="mailto:keyc.ai.2026@gmail.com">keyc.ai.2026@gmail.com</a></p>
+
+      </section>
+
+      <section class="content page public-page" id="clinics-page" aria-labelledby="clinics-title">
+        <div class="page-intro">
+          <div>
+            <span class="eyebrow">Clinic dataset</span>
+            <h1 id="clinics-title">Explore the directory snapshot</h1>
+            <p>Search all clinic records used by the simulator. This is reference data, not a list of current placement vacancies.</p>
+          </div>
+          <div class="dataset-summary"><strong id="clinicResultCount">793</strong><span>matching records</span></div>
+        </div>
+        <section class="data-notice">
+          <strong>Source note:</strong> Public GIReT/DIS clinic directory snapshot retrieved 12 July 2026. Names and codes may change; verify important details with an official source.
+          <a href="https://dis.moh.gov.my/clinical/pengguna" target="_blank" rel="noreferrer noopener">Open official directory ↗</a>
+        </section>
+        <section class="clinic-card" aria-label="Clinic directory">
+          <div class="clinic-controls">
+            <label class="search-field" for="clinicSearch"><span>Search clinic, district, or code</span><input id="clinicSearch" type="search" placeholder="e.g. Klinik Pergigian Muar" autocomplete="off" /></label>
+            <label for="stateFilter"><span>State or territory</span><select id="stateFilter"><option value="">All locations</option></select></label>
+            <label for="districtFilter"><span>District</span><select id="districtFilter"><option value="">All districts</option></select></label>
+          </div>
+          <div class="table-wrap clinic-table-wrap">
+            <table class="clinic-table">
+              <thead><tr><th scope="col">Clinic</th><th scope="col">Facility code</th><th scope="col">District</th><th scope="col">State / territory</th></tr></thead>
+              <tbody id="clinicTableBody"></tbody>
+            </table>
+          </div>
+          <div class="clinic-empty hidden" id="clinicEmpty">No clinics match those filters.</div>
+        </section>
+      </section>
+
+      <section class="content page simulation-overview" id="simulation-page" aria-labelledby="simulation-title">
+        <article class="simulation-card">
+          <div><span class="eyebrow">Timed practice</span><h1 id="simulation-title">Simulasi Penempatan Calon</h1><p id="simulationStatus">Masa simulasi bermula pada 11:59:50 AM.</p></div>
+          <div class="simulation-actions">
+            <label class="simulation-name" for="simulationPlayerName"><span>Nickname</span><input id="simulationPlayerName" type="text" maxlength="30" placeholder="Use an alias" autocomplete="off" required /></label>
+            <button class="simulation-button" id="startSimulation" type="button">Start Simulation</button>
+            <button class="simulation-retry hidden" id="retrySimulation" type="button">Retry Simulation</button>
+          </div>
+        </article>
+        <article class="leaderboard-card">
+          <div class="card-title-row"><div><h2>Your device leaderboard</h2><p>Top 10 runs saved only in this browser. Clearing site data removes them.</p></div><button class="clear-board-button" id="clearLeaderboard" type="button">Clear my results</button></div>
+          <div class="table-wrap"><table class="leaderboard-table"><thead><tr><th>Rank</th><th>Nickname</th><th>Selected clinic</th><th>Time</th><th>Completed</th></tr></thead><tbody id="leaderboardBody"><tr class="leaderboard-empty"><td colspan="5">No completed practice runs yet.</td></tr></tbody></table></div>
+        </article>
+      </section>
+
+      <section class="content page placement-page" id="placement-page" aria-labelledby="placement-title">
+        <article class="placement-panel">
+          <div class="placement-locked" id="placementLocked" aria-label="Placement practice has not opened"><div class="locked-message"><strong>Placement practice is locked</strong><span>Start a simulation, wait for 12:00:00 PM, then return to this page.</span><button class="primary-cta" type="button" data-tab-link="simulation">Back to simulation</button></div></div>
+          <div class="simulation-result hidden" id="simulationResult" role="status" aria-live="polite"></div>
+          <div class="simulation-result-actions hidden" id="simulationResultActions"><button class="simulation-retry" id="retrySimulationPlacement" type="button">Retry Simulation</button></div>
+          <div class="placement-live-content" id="placementLiveContent">
+            <h1 id="placement-title">Penempatan</h1>
+            <div class="stepper" aria-label="Practice steps">
+              <div class="step current" id="stepOne"><span class="step-dot" id="stepOneDot">1</span><span class="step-text"><strong>Pertama</strong><small>Penempatan</small></span></div><div class="step-line" id="stepLineOne"></div>
+              <div class="step upcoming" id="stepTwo"><span class="step-dot">2</span><span class="step-text"><strong>Kedua</strong><small>Pengakuan</small></span></div><div class="step-line" id="stepLineTwo"></div>
+              <div class="step upcoming" id="stepThree"><span class="step-dot">3</span><span class="step-text"><strong>Ketiga</strong><small>Cetak Slip</small></span></div>
+            </div>
+            <div class="stage-timer hidden" id="choiceTimer"><div class="success-toast" id="successToast" role="status" aria-live="polite"><span class="toast-tick">✓</span><span>Permohonan anda telah diterima</span></div><strong>00:44</strong><span>Tempoh Pemilihan</span></div>
+            <div class="workflow-stage active" id="placementSelectionStage">
+              <section class="candidate-summary" aria-label="Maklumat calon latihan"><div class="summary-row"><strong>NO. KAD PENGENALAN</strong><span>PRAKTIS-0001</span></div><div class="summary-row"><strong>NAMA</strong><span>CALON LATIHAN</span></div></section>
+              <section class="attention"><h2>PERHATIAN : SILA BACA DENGAN TELITI MAKLUMAT BERIKUT</h2><ul><li>Pegawai wajib membuat <strong>SATU PILIHAN SAHAJA</strong>, sama ada <strong>PENEMPATAN</strong> atau <strong>PENANGGUHAN</strong>.</li><li>Jika pegawai memilih untuk membuat penangguhan, pegawai tidak akan dilantik untuk sesi pengambilan ini.</li><li>Pilihan Penempatan di dalam Aplikasi ini adalah <strong>MUKTAMAD</strong>. Slip/Surat tawaran boleh dicetak selepas permohonan penempatan diterima oleh sistem.</li></ul></section>
+              <div class="choice-tabs" role="tablist" aria-label="Pilihan calon"><button class="choice-tab active" type="button" role="tab" aria-selected="true">Penempatan Calon</button><button class="choice-tab" type="button" role="tab" aria-selected="false">Penangguhan Calon</button></div>
+              <section class="placement-form">
+                <label id="facility-label">Sila Pilih Negeri, Kategori Fasiliti dan Fasiliti</label>
+                <div class="cascade-select" id="facilityCascade">
+                  <button class="cascade-trigger" type="button" aria-labelledby="facility-label facilitySelected" aria-haspopup="listbox" aria-expanded="false"><span id="facilitySelected">Sila Pilih</span><span class="select-caret" aria-hidden="true"></span></button>
+                  <div class="cascade-menu" role="listbox" aria-label="Sila Pilih Negeri, Kategori Fasiliti dan Fasiliti"><div class="cascade-column state-column" id="stateList" aria-label="Negeri"></div><div class="cascade-column category-column" id="categoryList" aria-label="Kategori Fasiliti"></div><div class="cascade-column clinic-column" id="clinicList" aria-label="Fasiliti"></div></div>
+                </div>
+                <div class="form-actions"><button class="back-button" type="button" disabled>Kembali</button><button class="next-button" id="toAcknowledgement" type="button">Seterusnya &gt;</button></div>
+              </section>
+            </div>
+            <div class="workflow-stage" id="acknowledgementStage">
+              <section class="candidate-summary acknowledgement-summary" aria-label="Maklumat pengakuan"><div class="summary-row"><strong>NO. KAD PENGENALAN</strong><span>PRAKTIS-0001</span></div><div class="summary-row"><strong>NAMA</strong><span>CALON LATIHAN</span></div><div class="summary-row"><strong>PENEMPATAN</strong><span id="ackPlacement">-</span></div></section>
+              <section class="acknowledgement-box"><h2>PENGAKUAN</h2><label class="ack-check"><input id="acknowledgementCheckbox" type="checkbox" required /><span>Saya faham sekiranya dilantik dalam perkhidmatan awam saya:</span></label><ol><li>Bersedia untuk ditempatkan di lokasi yang memerlukan perkhidmatan sebagaimana yang ditentukan oleh Kementerian Kesihatan Malaysia</li><li>Bersetuju dengan penempatan yang ditetapkan oleh Kementerian Kesihatan Malaysia dan saya tidak akan membuat rayuan sekiranya penempatan tidak seperti yang dimohon.</li><li>Saya juga faham sekiranya saya tidak mematuhi Arahan Penempatan yang ditetapkan, saya boleh dikenakan tindakan tatatertib selaras dengan Peraturan-Peraturan Pegawai Awam.</li></ol><p class="ack-bold">Seseorang pegawai tidak boleh ingkar perintah atau berkelakuan dengan apa-apa cara yang boleh ditafsirkan sebagai ingkar perintah.</p></section>
+              <div class="form-actions acknowledgement-actions"><button class="back-button text-action" id="backToPlacement" type="button">Kembali</button><button class="confirm-button" id="confirmApplication" type="button">Pengesahan</button></div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script src="clinic-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
